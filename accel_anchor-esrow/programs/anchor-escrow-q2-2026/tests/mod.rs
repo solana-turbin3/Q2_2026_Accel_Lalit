@@ -39,6 +39,7 @@ mod tests {
         deposit: u64,
         receive: u64,
     ) {
+        // Shared helper so the take/refund tests can start from the same escrow state.
         let make_ix = Instruction {
             program_id: anchor_escrow_q2_2026::id(),
             accounts: anchor_escrow_q2_2026::accounts::Make {
@@ -245,12 +246,14 @@ mod tests {
         let deposit = 100_000;
         let receive = 50_000;
 
+        // Each deal gets a deterministic escrow PDA from the maker and chosen seed.
         let escrow = Pubkey::find_program_address(
             &[b"escrow", maker.as_ref(), &seed.to_le_bytes()],
             &anchor_escrow_q2_2026::id(),
         )
         .0;
 
+        // The vault ATA is where the deposited mint A tokens sit until take or refund.
         let vault = associated_token::get_associated_token_address(&escrow, &mint_a);
 
         MintTo::new(&mut program, &payer, &mint_a, &maker_ata_a, deposit)
@@ -275,6 +278,7 @@ mod tests {
             receive,
         );
 
+        // These addresses are derived up front because the take ix may create the ATAs if needed.
         let maker_ata_b = associated_token::get_associated_token_address(&maker, &mint_b);
         let taker_ata_a = associated_token::get_associated_token_address(&taker.pubkey(), &mint_a);
 
@@ -393,6 +397,7 @@ mod tests {
 
         msg!("Refund tx CUs: {}", tx.compute_units_consumed);
 
+        // A successful refund should put the full deposit back under the maker's control.
         let maker_ata_a_account = program.get_account(&maker_ata_a).unwrap();
         let maker_ata_a_data =
             spl_token::state::Account::unpack(&maker_ata_a_account.data).unwrap();
