@@ -1,12 +1,12 @@
 [package]
-name = "transfer_vault_hook"
+name = "whitelist_hook"
 version = "0.1.0"
-description = "Created with Anchor"
+description = "Transfer-hook program — gates Token-2022 transfers behind the vault's whitelist PDAs"
 edition = "2021"
 
 [lib]
 crate-type = ["cdylib", "lib"]
-name = "transfer_vault_hook"
+name = "whitelist_hook"
 
 [features]
 default = []
@@ -23,16 +23,9 @@ custom-panic = []
 [dependencies]
 anchor-lang = "1.0.2"
 anchor-spl = "1.0.2"
-
-[dev-dependencies]
-whitelist_hook = { path = "../whitelist_hook", features = ["no-entrypoint"] }
-litesvm = "0.10.0"
-solana-message = "3.0.1"
-solana-transaction = "3.0.2"
-solana-signer = "3.0.0"
-solana-keypair = "3.0.1"
-spl-token-2022-interface = "2"
-spl-associated-token-account-interface = "2"
+spl-discriminator = "0.5.1"
+spl-tlv-account-resolution = "0.11.1"
+spl-transfer-hook-interface = "2.1.0"
 
 
 [lints.rust]
