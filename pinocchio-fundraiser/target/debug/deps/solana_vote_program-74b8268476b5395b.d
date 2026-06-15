@@ -1,8 +1,0 @@
-/home/lalitcap/code-verse/q1_acc_avhi/pinocchio-fundraiser/target/debug/deps/solana_vote_program-74b8268476b5395b.d: /home/lalitcap/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-vote-program-3.1.9/src/lib.rs /home/lalitcap/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-vote-program-3.1.9/src/vote_processor.rs /home/lalitcap/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-vote-program-3.1.9/src/vote_state/mod.rs /home/lalitcap/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-vote-program-3.1.9/src/vote_state/handler.rs
-
-/home/lalitcap/code-verse/q1_acc_avhi/pinocchio-fundraiser/target/debug/deps/libsolana_vote_program-74b8268476b5395b.rmeta: /home/lalitcap/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-vote-program-3.1.9/src/lib.rs /home/lalitcap/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-vote-program-3.1.9/src/vote_processor.rs /home/lalitcap/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-vote-program-3.1.9/src/vote_state/mod.rs /home/lalitcap/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-vote-program-3.1.9/src/vote_state/handler.rs
-
-/home/lalitcap/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-vote-program-3.1.9/src/lib.rs:
-/home/lalitcap/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-vote-program-3.1.9/src/vote_processor.rs:
-/home/lalitcap/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-vote-program-3.1.9/src/vote_state/mod.rs:
-/home/lalitcap/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-vote-program-3.1.9/src/vote_state/handler.rs:
